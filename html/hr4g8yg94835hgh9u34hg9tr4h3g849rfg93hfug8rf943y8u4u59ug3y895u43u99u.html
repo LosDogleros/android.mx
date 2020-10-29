@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+
+  <html lang="es-ES">
+    <head>
+
+<script language="Javascript" type="text/javascript">
+  
+document.oncontextmenu = function(){return false}
+  function disableselect(e){
+    return false
+      }
+        function reEnable(){
+          return true
+            }
+
+document.onselectstart=new Function ("return false")
+  if (window.sidebar){
+    document.onmousedown=disableselect
+      document.onclick=reEnable
+        }
+
+</script>
+
+
+
+<link rel="stylesheet" href="css/barra.css">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="stylesheet" type="text/css" href="css/boton.css">
+  <script src="js/funcion.html"></script>
+
+
+
+<script>
+
+  var current = 0;
+var imagenes = new Array();
+
+$(document)
+    .ready(function() {
+    var numImages = 6;
+    if (numImages <= 3) {
+        $('.right-arrow')
+      .css('display', 'none');
+        $('.left-arrow').css('display', 'none');
+    }
+	 
+    $('.left-arrow')
+        .on('click',function() {
+        if (current > 0) {
+            current = current - 1;
+        } 
+          else {
+            current = numImages - 3;
+        }
+        
+        $(".carrusel")
+          .animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+        return false;
+    });
+
+    $('.left-arrow')
+            .on('hover', function() {
+        $(this).css('opacity','0.5');
+    }, function() {
+        $(this)
+              .css('opacity','1');
+    });
+
+    $('.right-arrow').on('hover', function() {
+        $(this)
+                .css('opacity','0.5');
+    }, function() {
+        $(this).css('opacity','1');
+    });
+
+    $('.right-arrow')
+                  .on('click', function() {
+        if (numImages > current + 3) {
+            current = current+1;
+        } 
+                    else {
+            current = 0;
+        }
+        
+        $(".carrusel")
+                      .animate({"left": -($('#product_'+current)
+                        .position().left)}, 600);
+        
+        return false;
+    }); 
+ });
+
+                      </script>
+
+<script>
+function openNav() {
+    document.getElementById("sideNavigation").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+ 
+function closeNav() {
+    document.getElementById("sideNavigation").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+</script>
+
+<link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/social.css">
+
+<link rel="icon" type="image/vnd.microsoft.icon" href="images/logo.ico">
+      <title>
+        Los Dogleros
+      </title>
+
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+</head>
+  <style>
+
+.background_color
+  {
+    background-color: #1D1D1F;
+  }
+
+.B1
+{
+color: #ffffff;
+font-size: 30px;
+font-family: 'Abel', sans-serif;
+text-align: left;
+height: 30px;
+}
+
+.A1
+{
+color: #ffffff;
+font-size: 110px;
+font-family: 'Permanent Marker', cursive;
+height: 50px;
+}
+
+.A2
+{
+color: #ffffff;
+font-size: 30px;
+font-family: 'Concert One', cursive;
+}
+
+.A3
+{
+color: #ffffff;
+font-size: 50px;
+font-family: 'Concert One', cursive;
+}
+
+.header
+{
+background-color: #07889b;
+padding: 10px;
+}
+
+.header2
+{
+background-color: #66b9bf;
+padding: 10px;
+}
+
+.boton_solido
+  {
+    text-decoration: none;
+      padding: 10% 20%;
+        font-weight: 600;
+          font-size: 200%;
+            font-family: 'Sansita Swashed', cursive;
+              color: transparent;
+                text-shadow: 0px 0px 0px #000;
+                  border-radius: 50px 50px 50px 50px;
+                    border: 0px solid #ffffff;
+                      background-color: #ffffff;         
+                    }
+                  .boton_solido:hover
+                {
+              font-size: 200.5%;
+padding: 10.5% 20.5%;
+            }
+
+.footer
+{
+background-color: #1F2833;
+border-radius: 50px 50px 0px 0px;
+padding: 5px 5px; 
+display: block;
+
+}
+
+.footer2
+{
+background-color: #000000;
+border-radius: 0px 0px 0px 0px;
+padding: 5px 5px; 
+display: block;
+
+}
+
+.foottext
+{
+font-size: 110%;
+font-family: 'Staatliches', cursive;
+text-decoration: none;
+color: #ffffff;
+
+}
+
+
+
+
+.ups
+{
+font-size: 100%;
+font-family: 'Staatliches', cursive;
+text-decoration: none;
+color: #ffffff;
+}
+
+
+
+</style>
+
+<body class="background_color">
+
+<p id="inicio">
+</p>
+
+<div class="social">
+		<ul>
+			<li><a href="https://www.facebook.com/profile.php?id=100014386295829" target="_blank" class="icon-facebook"><img src="images/social/1.png" width="30px"></a></li>
+			<li><a href="https://twitter.com/LosDogleros" target="_blank" class="icon-twitter"><img src="images/social/2.png" width="30px"></a></li>
+			<li><a href="https://www.instagram.com/los_dogleros/" target="_blank" class="icon-googleplus"><img src="images/social/3.png" width="30px"></a></li>
+			<li><a href="https://www.youtube.com/channel/UC4xgt4zmgfivgU7M-q2updQ/featured" target="_blank" class="icon-pinterest"><img src="images/social/4.png" width="30px"></a></li>
+			<li><a href="https://www.pinterest.com.mx/losdogleros" target="_blank" class="icon-mail"><img src="images/social/5.png" width="30px"></a></li>
+		</ul>
+	</div>
+
+<div id="sideNavigation" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="html/descripccion/descripccion.html">Quienes somos</a>
+<br />
+  <a href="https://www.facebook.com/profile.php?id=100014386295829">Contactanos</a>
+<br />
+  <a href="html/politica/politica.html">Politica de privacidad</a>
+<br />
+  <a href="html/proyecto/proyecto.html">Proximos proyectos</a>
+</div>
+ 
+<nav class="topnav" >
+  <a href="#" onclick="openNav()">
+    <svg width="30" height="30" id="icoOpen">
+        <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+        <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+        <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+    </svg>
+  </a>
+</nav>
+
+
+
+
+<center>
+
+<div class="contenedor">
+  <div class="slider-contenedor">
+  
+<section class="contenido-slider">
+  <table border="0">
+    <tr>
+      <td>
+        <p class="A3">
+          ¿Buscas videojuegos?
+            </p>
+              </td>
+                </tr>
+                  <tr>
+                    <td>
+                      <p class="A2"> 
+                        Aqui encontraras videojuegos como:
+                          Minecraft dungeons, neon abyss, enter the gungeon, terraria y  más.
+                            </p>
+                              </td>
+                                </tr>
+                                  </table>
+                                    <img src="images/baner/B1.png"  >
+                                      </section>
+
+<section class="contenido-slider">
+  <table border="0">
+    <tr>
+      <td>
+        <p class="A3">
+          Mi nombre es Marin
+            </p>
+              </td>
+                </tr>
+                  <tr>
+                    <td>
+                      <p class="A2"> 
+                        Mi nombre es Marin, conocido como Los Dogleros, 
+                          y ¡Llevo al límite cualquier mecanismo/feature/guía de cualquier videojuego!
+                            </p>
+                              </td>
+                                </tr>
+                                  </table>
+                                    <img src="images/baner/B2.png"  >
+                                      </section>
+
+<section class="contenido-slider">
+  <table border="0">
+    <tr>
+      <td>
+        <p class="A3">
+          ¡Contenido de la mas alta calidad!
+            </p>
+              </td>
+                </tr>
+                  <tr>
+                    <td>
+                      <p class="A2"> 
+                        No importa si es jugador experto o novato, consulte mis vídeos prácticos. 
+                          Funcionales para todas las plataformas.
+                            </p>
+                              </td>
+                                </tr>
+                                  </table>
+                                    <img src="images/baner/B3.png"  >
+                                      </section>
+
+<section class="contenido-slider">
+  <table border="0">
+    <tr>
+      <td>
+        <p class="A3">
+          Solo te pregunto:
+            </p>
+              </td>
+                </tr>
+                  <tr>
+                    <td>
+                      <p class="A2"> 
+                        ¿Crees poder darme la oportunidad de demostrártelo?
+                          ¿De crecer?
+                            </p>
+                              </td>
+                                </tr>
+                                  </table>
+                                    <img src="images/baner/B4.jpg"  >
+                                      </section>
+
+<section class="contenido-slider">
+  <table border="0">
+    <tr>
+      <td>
+        <p class="A3">
+          ¿Buscas videojuegos?
+            </p>
+              </td>
+                </tr>
+                  <tr>
+                    <td>
+                      <p class="A2"> 
+                        Aqui encontraras videojuegos como:
+                          Minecraft dungeons, neon abyss, enter the gungeon, terraria y  más.
+                            </p>
+                              </td>
+                                </tr>
+                                  </table>
+                                    <img src="images/baner/B1.png"  >
+                                      </section>
+
+
+            
+
+</div>
+  </div>
+     <script src="js/main.js"></script>
+
+<br/>
+
+</center>
+
+<center>
+  <p class="A1">
+    Los dogleros
+  </p>
+</center>
+
+<br/>
+  <br/>
+    <br/>
+      <br/>
+        <br/>
+          <br/>
+
+<center>
+<video controls width="800" src="videos/intro.mp4" autoplay=1 muted poster="images/papel.jpg"></video>
+</center>
+
+<br/>
+  <br/>
+    <br/>
+
+<center>
+
+<table border="0">
+<tr>
+<td>
+
+<div>
+
+<div class="sep"> <a href="html/donaciones/donaciones.html" class="btn btn-sm animated-button victoria-two">Doname</a> </div>
+
+<div class="sep"> <a href="https://www.youtube.com/channel/UC4xgt4zmgfivgU7M-q2updQ" class="btn btn-sm animated-button victoria-three">Suscribete</a> </div>
+
+<div class="sep"> <a href="html/agradecimientos/agradecimientos.html" class="btn btn-sm animated-button victoria-one">Agradecimientos</a> </div>
+
+</div>
+
+</td>
+</tr>
+</table>
+
+</center>
+
+
+
+
+<br/>
+<br/>
+<br/>
+
+<p class="B1">
+ &nbsp; &nbsp; &nbsp; Categorias
+</p>
+
+<br/>
+
+<center>           
+  <div id="carrusel">
+                
+
+<a href="#" class="left-arrow"><img src="images/left-arrow.png" onmouseover="this.width=62;" onmouseout="this.width=60;" width="60"/></a>
+                
+  <a href="#" class="right-arrow"><img src="images/right-arrow.png" onmouseover="this.width=62;" onmouseout="this.width=60;" width="60"/></a>
+                
+
+<div class="carrusel">
+                    
+
+<div class="product" id="product_0">
+                        
+<a href="https://losdogleros.github.io/neonvideomx/" target="_top">  <img class="redon" src="images/imagenes-s/0.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/>
+ </a>                     
+    </div>
+              
+
+      
+
+<div class="product" id="product_1">
+                        
+<a href="https://losdogleros.github.io/1minutovideomx/" target="_top">  <img class="redon" src="images/imagenes-s/1.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/>
+ </a>                      
+    </div>
+ 
+
+                  
+
+<div class="product" id="product_2">
+                        
+<a href="https://losdogleros.github.io/musicavideomx/" target="_top">  <img class="redon" src="images/imagenes-s/2.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/>
+ </a>                      
+    </div>
+
+                   
+
+<div class="product" id="product_3">
+                        
+<a href="https://losdogleros.github.io/minecraftvideomx/" target="_top">  <img class="redon" src="images/imagenes-s/3.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/> </a>                                          
+    </div>
+
+                  
+
+<div class="product" id="product_4">
+                        
+<a href="https://losdogleros.github.io/terrariavideomx/" target="_top">  <img class="redon" src="images/imagenes-s/4.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/> </a>                      
+
+    </div>
+
+
+                   
+
+<div class="product" id="product_5">
+                        
+<a href="https://losdogleros.github.io/fallguysvideomx/" target="_top">  <img class="redon" src="images/imagenes-s/5.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/>
+ </a>
+    </div>
+            
+
+<div class="product" id="product_6">
+                        
+<a href="https://losdogleros.github.io/trucosvideomx/" target="_top">  <img class="redon" src="images/imagenes-s/6.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/> </a>                       
+    </div>
+
+
+<div class="product" id="product_7">
+                        
+<a href="https://losdogleros.github.io/randomvideomx/" target="_top">  <img class="redon" src="images/imagenes-s/7.jpg" onmouseover="this.width=260;" onmouseout="this.width=250;" width="250"/>
+ </a>
+    </div>
+
+&nbsp
+
+</div>
+ 
+               
+  </div>
+    
+
+</div>
+</div>  
+    </center> 
+
+
+
+
+
+
+<a class="foottext" href="#inicio">
+<footer class="footer">
+
+<center>
+Subir al inicio
+</center>
+
+</footer>
+</a>
+
+<footer class="footer2">
+
+
+<p class="ups">
+Ya no se que poner xD
+</p>
+
+<br />
+
+<br />
+
+<br />
+
+</footer>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
